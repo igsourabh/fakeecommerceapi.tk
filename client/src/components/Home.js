@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <>
       <div className="main ">
-        <div className="content bg-blue-700 h-[600px] sm:h-[500px] flex justify-center  pb-28 items-center sm:pr-72 sm:pb-20">
+        <div className="content bg-blue-700 h-[600px] sm:h-[500px] w-full sm-sull flex justify-center  pb-28 items-center sm:pr-72 sm:pb-20">
           <div>
             <h1 className="text-white text-3xl sm:text-5xl mb-14">
               Fake{"{"}Ecommerce{"}"}api

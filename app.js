@@ -16,6 +16,9 @@ app.use("/", require("./routes/getproducts"));
 app.use("/ok", (req, res) => {
   res.json("ok");
 });
+
+
+
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
   app.use(express.static(path.join(__dirname, "/client/build")));

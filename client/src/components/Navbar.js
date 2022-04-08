@@ -1,6 +1,14 @@
 import React from "react";
+import { Link, useHistory } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
+  const authtoken = localStorage.getItem("authtoken");
+  const History = useHistory();
+  const handellogout = () => {
+    localStorage.removeItem("authtoken");
+    History.push("/");
+    window.location.reload(false);
+  };
   return (
     <>
       <div className="md:hidden">
@@ -21,30 +29,50 @@ const navbar = () => {
         <div className="content bg-white flex justify-center h-16 items-center  ">
           <ul className="  ">
             <li>
-              <a href="" className="text-blue-700 text-lg font-bold">
+              <Link to="" className="text-blue-700 text-lg font-bold">
                 FakeEcommerceAPI
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="flex ml-40">
             <li>
-              <a href="" className="text-blue-600 text-sm  mx-2">
+              <Link to="" className="text-blue-600 text-sm  mx-2">
                 contact us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="text-blue-600 text-sm  mx-2">
+              <Link to="" className="text-blue-600 text-sm  mx-2">
                 about us
-              </a>
-              <a href="" className="text-blue-600 text-sm  mx-2">
+              </Link>
+              <Link to="" className="text-blue-600 text-sm  mx-2">
                 Guide
-              </a>
+              </Link>
             </li>
           </ul>
+          {!authtoken && (
+            <div className="absolute right-2">
+              <Link
+                to="/login"
+                className="bg-blue-600 text-white py-1 px-3 rounded-md "
+              >
+                login
+              </Link>
+            </div>
+          )}
+          {authtoken && (
+            <div className="absolute right-2">
+              <button
+                onClick={handellogout}
+                className="bg-blue-600 text-white py-1 px-3 rounded-md "
+              >
+                Log out
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
   );
 };
 
-export default navbar;
+export default Navbar;

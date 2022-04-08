@@ -10,7 +10,9 @@ const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
 router.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
-
+  // if (regex.test(email)) {
+  //   return res.json("not a valid email");
+  // }
   const finduser = await User.findOne({ email: email });
   if (finduser) {
     return res.json({ error: "user already exist" });
@@ -50,7 +52,7 @@ router.post("/login", async (req, res) => {
     user: { id: user.id },
   };
   const authtoken = jwt.sign(data, secret);
-  res.json({status:201, authtoken: authtoken });
+  res.json({ status: 201, authtoken: authtoken });
 });
 
 module.exports = router;

@@ -12,7 +12,7 @@ router.get("/getallproducts", async (req, res) => {
 });
 // mobilephones category
 router.get("/category/mobilephone", async (req, res) => {
-  const getallproducts = await Products.find({ category: "mobiles" });
+  const getallproducts = await Products.find({ category: "mobilephone" });
   res.json(getallproducts);
 });
 
