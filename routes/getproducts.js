@@ -34,8 +34,8 @@ router.get("/category/computers", async (req, res) => {
 });
 
 // applinances
-router.get("/category/appliances ", async (req, res) => {
-  const getallproducts = await Products.find({ category: "appliances " });
+router.get("/category/appliances", async (req, res) => {
+  const getallproducts = await Products.find({ category: "appliances" });
   res.json(getallproducts);
 });
 

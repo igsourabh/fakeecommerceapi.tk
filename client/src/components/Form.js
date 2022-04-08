@@ -60,6 +60,9 @@ const From = () => {
   };
   const handelsubmit = (e) => {
     e.preventDefault();
+    if (imageloading == true) {
+      return alert("wait");
+    }
     if (category == "") {
       return alert("not pic");
     }
@@ -83,6 +86,7 @@ const From = () => {
       )
       .then((res) => {
         console.log(res);
+        window.location.reload(false);
       });
   };
   return (
@@ -157,9 +161,9 @@ const From = () => {
                   id="grid-state"
                 >
                   <option></option>
-                  <option>mobilephone</option>
-                  <option>fashion</option>
-                  <option>computers</option>
+                  {/* <option>mobilephone</option> */}
+                  {/* <option>fashion</option> */}
+                  {/* <option>computers</option> */}
                   <option>appliances</option>
                   <option>electronics</option>
                   <option>books</option>
