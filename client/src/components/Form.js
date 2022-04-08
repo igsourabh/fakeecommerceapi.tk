@@ -164,9 +164,9 @@ const From = () => {
                   {/* <option>mobilephone</option> */}
                   {/* <option>fashion</option> */}
                   {/* <option>computers</option> */}
-                  <option>appliances</option>
-                  <option>electronics</option>
-                  <option>books</option>
+                  {/* <option>appliances</option> */}
+                  {/* <option>electronics</option> */}
+                  {/* <option>books</option> */}
                   <option>toys&games</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

@@ -15,9 +15,9 @@ const Navbar = () => {
         <div className="content flex justify-center items-center py-2 ">
           <div className="absolute top-2 left-1 pl-3 pt-1">
             <div className="hamburbger flex-col cursor-pointer ">
-              <div className="line p- w-6 h-0.5 bg-blue-600 my-1"></div>
-              <div className="line p- w-6 h-0.5 bg-blue-600 my-1"></div>
-              <div className="line p- w-6 h-0.5 bg-blue-600 my-1"></div>
+              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
             </div>
           </div>
 
@@ -27,24 +27,24 @@ const Navbar = () => {
 
       <div className="hidden md:block main ">
         <div className="content bg-white flex justify-center h-16 items-center  ">
-          <ul className="  ">
+          <ul className=" pr-96 ">
             <li>
               <Link to="" className="text-blue-700 text-lg font-bold">
                 FakeEcommerceAPI
               </Link>
             </li>
           </ul>
-          <ul className="flex ml-40">
+          <ul className="flex ">
             <li>
-              <Link to="" className="text-blue-600 text-sm  mx-2">
-                contact us
+              <Link to="/guide" className="text-blue-600 text-lg  mx-2">
+                Guide
               </Link>
             </li>
             <li>
-              <Link to="" className="text-blue-600 text-sm  mx-2">
+              <Link to="" className="text-blue-600 text-lg  mx-2">
                 about us
               </Link>
-              <Link to="" className="text-blue-600 text-sm  mx-2">
+              <Link to="" className="text-blue-600 text-lg  mx-2">
                 Guide
               </Link>
             </li>

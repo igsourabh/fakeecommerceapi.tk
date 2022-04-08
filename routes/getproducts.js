@@ -7,7 +7,7 @@ const fetchuser = require("../middleware/fetchuser");
 const router = express.Router();
 // get all products
 router.get("/getallproducts", async (req, res) => {
-  const getallproducts = await Products.find();
+  const getallproducts = await Products.find({});
   res.json(getallproducts);
 });
 // mobilephones category
@@ -22,11 +22,6 @@ router.get("/category/fashion", async (req, res) => {
   res.json(getallproducts);
 });
 
-// electornics category
-router.get("/category/electronics", async (req, res) => {
-  const getallproducts = await Products.find({ category: "electronics" });
-  res.json(getallproducts);
-});
 // computers
 router.get("/category/computers", async (req, res) => {
   const getallproducts = await Products.find({ category: "computers" });
@@ -36,6 +31,11 @@ router.get("/category/computers", async (req, res) => {
 // applinances
 router.get("/category/appliances", async (req, res) => {
   const getallproducts = await Products.find({ category: "appliances" });
+  res.json(getallproducts);
+});
+// electornics category
+router.get("/category/electronics", async (req, res) => {
+  const getallproducts = await Products.find({ category: "electronics" });
   res.json(getallproducts);
 });
 

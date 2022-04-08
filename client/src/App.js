@@ -6,6 +6,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import Form from "./components/Form";
+import Guide from "./components/Guide";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/form" component={Form} />
+          <Route exact path="/guide" component={Guide} />
         </Switch>
       </Router>
     </>
