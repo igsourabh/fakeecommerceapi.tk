@@ -61,7 +61,7 @@ const Home = () => {
                     <div className="  w-[360px] md:w-fit ">
                       <pre className="">
                         <code className="language-js ">
-                          {`fetch('https://www.fakeecommerceapi.tk/getallproducts')
+                          {`fetch('https://www.fakeecommerceapi.tk/products/getallproducts')
 .then(response => response.json())
 .then(json => console.log(json))}`}
                         </code>
@@ -119,17 +119,17 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/getallproducts"
+                      href="https://www.fakeecommerceapi.tk/products/getallproducts"
                       className="ml-14 text-blue-500"
                     >
-                      /getallpost
+                      /getallproducts
                     </a>{" "}
                   </div>
                   <div>
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/mobilephone"
+                      href="https://www.fakeecommerceapi.tk/products/category/mobilephone"
                       className="ml-14 text-blue-500"
                     >
                       /category/mobilephone
@@ -139,7 +139,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/toys&games"
+                      href="https://www.fakeecommerceapi.tk/products/category/toys&games"
                       className="ml-14 text-blue-500"
                     >
                       /category/toys&games
@@ -149,7 +149,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/electronics"
+                      href="https://www.fakeecommerceapi.tk/products/category/electronics"
                       className="ml-14 text-blue-500"
                     >
                       /category/electronics
@@ -159,7 +159,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/fashion"
+                      href="https://www.fakeecommerceapi.tk/products/category/fashion"
                       className="ml-14 text-blue-500"
                     >
                       /category/fashion
@@ -169,7 +169,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/computers"
+                      href="https://www.fakeecommerceapi.tk/products/category/computers"
                       className="ml-14 text-blue-500"
                     >
                       /category/computers
@@ -179,7 +179,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/appliances"
+                      href="https://www.fakeecommerceapi.tk/products/category/appliances"
                       className="ml-14 text-blue-500"
                     >
                       /category/appliances
@@ -189,7 +189,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/category/books"
+                      href="https://www.fakeecommerceapi.tk/products/category/books"
                       className="ml-14 text-blue-500"
                     >
                       /category/books
@@ -199,7 +199,7 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/625001e5f57dd834e00ca8ce"
+                      href="https://www.fakeecommerceapi.tk/products/625001e5f57dd834e00ca8ce"
                       className="ml-14 text-blue-500"
                     >
                       /:id
