@@ -12,11 +12,13 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", require("./routes/signup.js"));
 app.use("/api/auth", require("./routes/createproducts.js"));
-app.use("/api", require("./routes/getsingelproducts.js"));
-app.use("/api", require("./routes/getproducts.js"));
+app.use("/", require("./routes/getproducts.js"));
+app.use("/", require("./routes/getsingelproducts.js"));
 // app.use("/ok", (req, res) => {
 //   res.json("ok");
 // });
+
+
 
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
