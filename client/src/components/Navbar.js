@@ -1,29 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 const Navbar = () => {
   const authtoken = localStorage.getItem("authtoken");
+  const [menu, setmenu] = useState(false);
   const History = useHistory();
   const handellogout = () => {
     localStorage.removeItem("authtoken");
     History.push("/");
     window.location.reload(false);
   };
+  const sidemenu = () => {
+    setmenu(true);
+  };
+  const hidemenu = () => {
+    setmenu(false);
+  };
   return (
     <>
       <div className="md:hidden">
         <div className="content flex justify-center items-center py-2 ">
           <div className="absolute top-2 left-1 pl-3 pt-1">
-            <div className="hamburbger flex-col cursor-pointer ">
-              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
-              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
-              <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
-            </div>
+            {!menu && (
+              <button
+                onClick={sidemenu}
+                className="hamburbger flex-col cursor-pointer "
+              >
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+              </button>
+            )}
+            {menu && (
+              <button
+                onClick={hidemenu}
+                className="hamburbger flex-col cursor-pointer "
+              >
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+                <div className="line p- w-6 h-0.5 bg-blue-600  my-1"></div>
+              </button>
+            )}
           </div>
 
-          <h1 className="text-blue-700 text-lg font-bold">FakeEcommerceAPI</h1>
+          <h1 className="text-blue-700 text-lg font-bold">
+            <Link to="/">FakeEcommerceAPI</Link>{" "}
+          </h1>
         </div>
       </div>
+      {menu && (
+        <div className="sidebar bg-white border-b-2 border-t-4 absolute w-full ">
+          <div className="con flex justify-start items-center ml-5 py-4">
+            <ul>
+              <li className="my-1 text-blue-700 text-lg font-medium">
+                <Link to="/guide">Guide</Link>
+              </li>
+              <li className="my-1 text-blue-700 text-lg font-medium">
+                <Link to="">Contact Us</Link>
+              </li>
+              <li className="my-1 text-blue-700 text-lg font-medium">
+                <Link to="">About Us</Link>
+              </li>
+              <li className="my-1 text-blue-700 text-lg font-medium">
+                <Link to=""> Login</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
 
       <div className="hidden md:block main ">
         <div className="content bg-white flex justify-center h-16 items-center  ">
@@ -49,6 +93,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+
           {!authtoken && (
             <div className="absolute right-2">
               <Link
