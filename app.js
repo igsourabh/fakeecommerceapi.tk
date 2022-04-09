@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", require("./routes/signup.js"));
 app.use("/api/auth", require("./routes/createproducts.js"));
-app.use("/", require("./routes/getproducts.js"));
-app.use("/", require("./routes/getsingelproducts.js"));
+app.get("/", require("./routes/getproducts.js"));
+app.get("/", require("./routes/getsingelproducts.js"));
 // app.use("/ok", (req, res) => {
 //   res.json("ok");
 // });
