@@ -22,7 +22,7 @@ const Guide = () => {
               </h1>
               <pre className="">
                 <code className="language-js ">
-                  {`fetch('https://instaclone.tk/getallproducts')
+                  {`fetch('https://www.fakeecommerceapi.tk/getallproducts')
 .then(response => response.json())                                                         
 .then(json => console.log(json))}`}
                 </code>

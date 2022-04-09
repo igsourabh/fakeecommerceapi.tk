@@ -20,6 +20,7 @@ const Home = () => {
     }, 5000);
   };
 
+
   return (
     <>
       <div className="example">
@@ -60,7 +61,7 @@ const Home = () => {
                     <div className="  w-[360px] md:w-fit ">
                       <pre className="">
                         <code className="language-js ">
-                          {`fetch('https://jsonplaceholder.typicode.com/todos/1')
+                          {`fetch('https://www.fakeecommerceapi.tk/getallproducts')
 .then(response => response.json())
 .then(json => console.log(json))}`}
                         </code>
@@ -97,21 +98,21 @@ const Home = () => {
 
             <div className="mt-14 ">
               <div className="">
-                <h1 className=" text-3xl  text-black capitalize">
+                <h1 className=" text-3xl font-semibold  text-black capitalize">
                   when to use
                 </h1>
                 <p className="text-gray-700 pt-2 text-xm font-medium">
                   FakeEcommerceAPI is a free online REST API that you can use
                   whenever you need some fake data. It can be in a README on
-                  GitHub, for a demo on CodeSandbox, in code examples on Stack
+                  GitHub, for a demo on <a className="text-blue-600" href="https://codesandbox.io/s/naughty-chaplygin-whorio?file=/src/App.js">CodeSandbox,</a>  in code examples on Stack
                   Overflow, ...or simply to test things locallys.
                 </p>
 
-                <h1 className="mt-7  text-3xl  text-blackpr-28 md:pr-52 capitalize">
+                <h1 className="mt-7  text-3xl font-semibold  text-black capitalize">
                   Routes
                 </h1>
                 <p className="text-gray-700 pt-2 text-xm font-medium">
-                  FakeEcommerceAPI comes with a set of 6 common resources:
+                  FakeEcommerceAPI comes with a set of 9 common resources:
                 </p>
                 <div className="text-gray-700 pt-2 text-xm font-medium flex-col">
                   <div>
@@ -192,6 +193,16 @@ const Home = () => {
                       className="ml-14 text-blue-500"
                     >
                       /category/books
+                    </a>{" "}
+                  </div>
+                  <div>
+                    GET
+                    <a
+                      target="_blank"
+                      href="https://www.fakeecommerceapi.tk/625001e5f57dd834e00ca8ce"
+                      className="ml-14 text-blue-500"
+                    >
+                      /:id
                     </a>{" "}
                   </div>
                 </div>
