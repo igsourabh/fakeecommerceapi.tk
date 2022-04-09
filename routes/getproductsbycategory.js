@@ -6,16 +6,9 @@ const fetchuser = require("../middleware/fetchuser");
 
 const router = express.Router();
 // get all products
-router.get("/getallproducts", async (req, res) => {
-  try {
-    const getallproducts = await Products.find();
-    res.json(getallproducts);
-  } catch (error) {
-    console.log(error);
-  }
-});
+
 // mobilephones category
-router.get("/category/mobilephone", async (req, res) => {
+router.get("/mobilephone", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "mobilephone" });
     res.json(getallproducts);
@@ -25,7 +18,7 @@ router.get("/category/mobilephone", async (req, res) => {
 });
 
 // fashion catogary
-router.get("/category/fashion", async (req, res) => {
+router.get("/fashion", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "fashion" });
     res.json(getallproducts);
@@ -35,7 +28,7 @@ router.get("/category/fashion", async (req, res) => {
 });
 
 // computers
-router.get("/category/computers", async (req, res) => {
+router.get("/computers", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "computers" });
     res.json(getallproducts);
@@ -45,7 +38,7 @@ router.get("/category/computers", async (req, res) => {
 });
 
 // applinances
-router.get("/category/appliances", async (req, res) => {
+router.get("/appliances", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "appliances" });
     res.json(getallproducts);
@@ -54,7 +47,7 @@ router.get("/category/appliances", async (req, res) => {
   }
 });
 // electornics category
-router.get("/category/electronics", async (req, res) => {
+router.get("/electronics", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "electronics" });
     res.json(getallproducts);
@@ -64,7 +57,7 @@ router.get("/category/electronics", async (req, res) => {
 });
 
 // books
-router.get("/category/books", async (req, res) => {
+router.get("/books", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "books" });
     res.json(getallproducts);
@@ -74,7 +67,7 @@ router.get("/category/books", async (req, res) => {
 });
 
 // toys and games
-router.get("/category/toys&games", async (req, res) => {
+router.get("/toys&games", async (req, res) => {
   try {
     const getallproducts = await Products.find({ category: "toys&games" });
     res.json(getallproducts);
