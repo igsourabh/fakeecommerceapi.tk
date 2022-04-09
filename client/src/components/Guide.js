@@ -113,7 +113,7 @@ const Guide = () => {
               </h1>
               <pre className="">
                 <code className="language-js ">
-                  {`fetch('https://www.fakeecommerceapi.tk/:id')
+                  {`fetch('https://www.fakeecommerceapi.tk/category/computers/:id')
 .then(response => response.json())                                                         
 .then(json => console.log(json))}`}
                 </code>

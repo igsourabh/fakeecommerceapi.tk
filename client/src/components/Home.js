@@ -199,10 +199,10 @@ const Home = () => {
                     GET
                     <a
                       target="_blank"
-                      href="https://www.fakeecommerceapi.tk/625001e5f57dd834e00ca8ce"
+                      href="https://www.fakeecommerceapi.tk/category/computers/62500ec81841efbaefefa13a"
                       className="ml-14 text-blue-500"
                     >
-                      /:id
+                      /category/books/:id
                     </a>{" "}
                   </div>
                 </div>
