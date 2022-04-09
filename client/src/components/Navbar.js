@@ -56,7 +56,7 @@ const Navbar = () => {
                 <Link to="/guide">Guide</Link>
               </li>
               <li className="my-1 text-blue-700 text-lg font-medium">
-                <Link to="">Contact Us</Link>
+                <Link to="/conatactus">Contact Us</Link>
               </li>
               <li className="my-1 text-blue-700 text-lg font-medium">
                 <Link to="">About Us</Link>
@@ -85,11 +85,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="" className="text-blue-600 text-lg  mx-2">
-                about us
+              <Link to="/contactus" className="text-blue-600 text-lg  mx-2">
+                Contact us
               </Link>
               <Link to="" className="text-blue-600 text-lg  mx-2">
-                Guide
+                About us
               </Link>
             </li>
           </ul>

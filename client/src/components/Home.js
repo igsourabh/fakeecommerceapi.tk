@@ -202,7 +202,7 @@ const Home = () => {
                       href="https://www.fakeecommerceapi.tk/category/computers/62500ec81841efbaefefa13a"
                       className="ml-14 text-blue-500"
                     >
-                      /category/books/:id
+                      /category/computers/:id
                     </a>{" "}
                   </div>
                 </div>

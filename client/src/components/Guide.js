@@ -12,12 +12,12 @@ const Guide = () => {
         <div className="flex justify-center items-center w-full px-4 ">
           <div className="main ">
             <div className="w-96 md:w-[560px] px-4 md:px-0">
-              <h1 className="text-4xl "> Guide</h1>
-              <p className="text-lg">
+              <h1 className="text-4xl text-gray-700 "> Guide</h1>
+              <p className="text-lg my-5">
                 You can copy paste the code in your browser console to quickly
                 test FakeEcommerceAPI.
               </p>
-              <h1 className=" font-semibold text-xl md:text-3xl mt-4">
+              <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4">
                 For getting all Products
               </h1>
               <pre className="">
@@ -44,7 +44,7 @@ const Guide = () => {
             <hr />
 
             <div className="w-96 md:w-[560px] px-4 md:px-0">
-              <h1 className=" font-semibold text-xl md:text-3xl mt-4">
+              <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4">
                 Get Products by category
               </h1>
               <pre className="">
@@ -108,7 +108,7 @@ const Guide = () => {
 
             <hr />
             <div className="w-96 md:w-[560px] px-4 md:px-0">
-              <h1 className=" font-semibold text-xl md:text-3xl mt-4 capitalize">
+              <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4 capitalize">
                 Get singel products by products id
               </h1>
               <pre className="">
