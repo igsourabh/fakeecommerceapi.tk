@@ -75,7 +75,7 @@ const Home = () => {
                       </button>
                     </div>
 
-                    <div className="w-[360px] md:w-96">
+                    <div className="w-[360px] md:w-[500px]">
                       <pre>
                         <code className="language-js ">
                           {!showscirpt
@@ -95,9 +95,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="">
+            <div className="mt-14 ">
               <div className="">
-                <h1 className=" text-3xl  text-gray-600  capitalize">
+                <h1 className=" text-3xl  text-black capitalize">
                   when to use
                 </h1>
                 <p className="text-gray-700 pt-2 text-xm font-medium">
@@ -107,7 +107,7 @@ const Home = () => {
                   Overflow, ...or simply to test things locallys.
                 </p>
 
-                <h1 className="mt-14  text-3xl  text-gray-600 pr-28 md:pr-52 capitalize">
+                <h1 className="mt-7  text-3xl  text-blackpr-28 md:pr-52 capitalize">
                   Routes
                 </h1>
                 <p className="text-gray-700 pt-2 text-xm font-medium">
