@@ -14,9 +14,9 @@ app.use("/api/auth", require("./routes/signup.js"));
 app.use("/api/auth", require("./routes/createproducts.js"));
 app.use("/", require("./routes/getproducts"));
 app.use("/", require("./routes/getsingelproducts"));
-app.use("/ok", (req, res) => {
-  res.json("ok");
-});
+// app.use("/ok", (req, res) => {
+//   res.json("ok");
+// });
 
 
 
