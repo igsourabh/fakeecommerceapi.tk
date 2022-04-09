@@ -49,9 +49,12 @@ const Navbar = () => {
         </div>
       </div>
       {menu && (
-        <div className="sidebar bg-white border-b-2 border-t-4 absolute w-full ">
-          <div className="con flex justify-start items-center ml-5 py-4">
-            <ul>
+        <div
+          className="sidebar bg-white border-b-2 absolute w-full border-t-2 "
+          style={{ zIndex: "1" }}
+        >
+          <div className="con flex bg-white justify-start items-center ml-5 py-4">
+            <ul className="bg-white">
               <li className="my-1 text-blue-700 text-lg font-medium">
                 <Link to="/guide">Guide</Link>
               </li>
