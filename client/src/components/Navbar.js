@@ -10,6 +10,10 @@ const Navbar = () => {
     History.push("/");
     window.location.reload(false);
   };
+  // for hiding sidemenu
+  const handelclick1=(()=>{
+    setmenu(false)
+  })
   const sidemenu = () => {
     setmenu(true);
   };
@@ -44,7 +48,7 @@ const Navbar = () => {
           </div>
 
           <h1 className="text-blue-700 text-lg font-bold">
-            <Link to="/">FakeEcommerceAPI</Link>{" "}
+            <Link onClick={handelclick1} to="/">FakeEcommerceAPI</Link>{" "}
           </h1>
         </div>
       </div>
@@ -56,17 +60,17 @@ const Navbar = () => {
           <div className="con flex bg-white justify-start items-center ml-5 py-4">
             <ul className="bg-white">
               <li className="my-1 text-blue-700 text-lg font-medium">
-                <Link to="/guide">Guide</Link>
+                <Link onClick={handelclick1} to="/guide">Guide</Link>
               </li>
               <li className="my-1 text-blue-700 text-lg font-medium">
-                <Link to="/contactus">Contact Us</Link>
+                <Link onClick={handelclick1} to="/contactus">Contact Us</Link>
               </li>
               <li className="my-1 text-blue-700 text-lg font-medium">
                 <a target="_blank" href="https://www.linkedin.com/in/sourabhvaish/">About Us</a>
               </li>
               {!authtoken && (
                 <li className="my-1 text-blue-700 text-lg font-medium">
-                  <Link to="/login">Login</Link>
+                  <Link onClick={handelclick1} to="/login">Login</Link>
                 </li>
               )}
               {authtoken && (
@@ -74,7 +78,7 @@ const Navbar = () => {
                   onClick={handellogout}
                   className="my-1 text-white bg-blue-700 px-3 py-1 flex justify-center items-center text-sm  rounded-md"
                 >
-                  <Link to="">logout</Link>
+                  <Link onClick={handelclick1} to="">logout</Link>
                 </button>
               )}
             </ul>

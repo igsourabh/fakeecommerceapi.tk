@@ -51,10 +51,15 @@ const Guide = () => {
               <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4">
                 Get Products by category
               </h1>
-              <p className="text-lg">
-                At first add: FakeEcommerceAPI supported category after <h1 className="font-semibold">{`https://www.fakeecommerceapi.tk/category/:{here}`}</h1>then add page number
-                and pagesize by default it takes pagesize 10
-              </p>
+              <h1 className="text-lg">
+                At first add: FakeEcommerceAPI supported category after the link<br />
+                <p className="font-semibold text-[1rem]">
+                  {`https://www.fakeecommerceapi.tk/category/
+                  {here}`}
+                </p>{" "}
+                then add page number and pagesize by default it takes pagesize
+                10
+              </h1>
               <pre className="">
                 <code className="language-js ">
                   {`fetch('https://www.fakeecommerceapi.tk/category/:mobilephone?page=1&size=5')
