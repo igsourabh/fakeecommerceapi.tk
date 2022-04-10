@@ -64,9 +64,16 @@ const Navbar = () => {
               <li className="my-1 text-blue-700 text-lg font-medium">
                 <Link to="">About Us</Link>
               </li>
-              <li className="my-1 text-blue-700 text-lg font-medium">
-                <Link to=""> Login</Link>
-              </li>
+              {!authtoken && (
+                <li className="my-1 text-blue-700 text-lg font-medium">
+                  <Link to="">Login</Link>
+                </li>
+              )}
+              {authtoken && (
+                <li className="my-1 text-white bg-blue-700 flex justify-center items-center text-lg  rounded-md">
+                  <Link to="">logout</Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -83,15 +90,21 @@ const Navbar = () => {
           </ul>
           <ul className="flex ">
             <li>
-              <Link to="/guide" className="text-blue-600 text-lg  mx-2">
+              <Link
+                to="/guide"
+                className="text-blue-600 text-lg font-normal mx-2"
+              >
                 Guide
               </Link>
             </li>
             <li>
-              <Link to="/contactus" className="text-blue-600 text-lg  mx-2">
+              <Link
+                to="/contactus"
+                className="text-blue-600 text-lg font-normal mx-2"
+              >
                 Contact us
               </Link>
-              <Link to="" className="text-blue-600 text-lg  mx-2">
+              <Link to="" className="text-blue-600 text-lg font-normal mx-2">
                 About us
               </Link>
             </li>

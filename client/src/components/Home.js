@@ -7,19 +7,11 @@ const Home = () => {
   const [showscirpt, setshowscirpt] = useState(false);
   useEffect(() => {
     Prism.highlightAll();
-  }, []);
+  }, [showscirpt]);
+
   const onrunscriptclick = () => {
     setshowscirpt(true);
-    axios.get("/ok").then((res) => {
-      console.log(res);
-    });
-    setTimeout(() => {
-      axios.get("/o").then((res) => {
-        console.log(res);
-      });
-    }, 5000);
   };
-
 
   return (
     <>
@@ -34,7 +26,11 @@ const Home = () => {
             </p>
             <h1 className="text-blue-200 text-lg md:text-2xl ">
               Powerder by{" "}
-              <a href="" className="text-white">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/sourabhvaish/"
+                className="text-white"
+              >
                 Sourabh Vaish
               </a>
             </h1>
@@ -104,8 +100,15 @@ const Home = () => {
                 <p className="text-gray-700 pt-2 text-xm font-medium">
                   FakeEcommerceAPI is a free online REST API that you can use
                   whenever you need some fake data. It can be in a README on
-                  GitHub, for a demo on <a className="text-blue-600" href="https://codesandbox.io/s/naughty-chaplygin-whorio?file=/src/App.js">CodeSandbox,</a>  in code examples on Stack
-                  Overflow, ...or simply to test things locallys.
+                  GitHub, for a demo on{" "}
+                  <a
+                    className="text-blue-600"
+                    href="https://codesandbox.io/s/naughty-chaplygin-whorio?file=/src/App.js"
+                  >
+                    CodeSandbox,
+                  </a>{" "}
+                  in code examples on Stack Overflow, ...or simply to test
+                  things locallys.
                 </p>
 
                 <h1 className="mt-7  text-3xl font-semibold  text-black capitalize">
