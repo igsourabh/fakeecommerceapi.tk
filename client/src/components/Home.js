@@ -72,7 +72,7 @@ const Home = () => {
                       </button>
                     </div>
 
-                    <div className="w-[360px] md:w-[500px]">
+                    <div className="w-[360px] md:w-[650px]">
                       <pre>
                         <code className="language-js ">
                           {!showscirpt

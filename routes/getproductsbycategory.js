@@ -14,7 +14,7 @@ router.get("/:category", async (req, res) => {
       page = 1;
     }
     if (!size) {
-      size = 5;
+      size = 8;
     }
     if (page == 0) {
       page = 1;
