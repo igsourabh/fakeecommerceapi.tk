@@ -66,13 +66,16 @@ const Navbar = () => {
               </li>
               {!authtoken && (
                 <li className="my-1 text-blue-700 text-lg font-medium">
-                  <Link to="">Login</Link>
+                  <Link to="/login">Login</Link>
                 </li>
               )}
               {authtoken && (
-                <li className="my-1 text-white bg-blue-700 flex justify-center items-center text-lg  rounded-md">
+                <button
+                  onClick={handellogout}
+                  className="my-1 text-white bg-blue-700 px-3 py-1 flex justify-center items-center text-sm  rounded-md"
+                >
                   <Link to="">logout</Link>
-                </li>
+                </button>
               )}
             </ul>
           </div>
