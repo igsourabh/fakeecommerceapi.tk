@@ -1,16 +1,15 @@
-const express = require("express");
-const connectDB = require("./db");
+const connectToDB = require("./db");
 const dotenv = require("dotenv");
+const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;
-const cors = require("cors");
-app.use(cors);
-connectDB();
-
+var cors = require("cors");
+connectToDB();
 dotenv.config();
 
-app.use(express.json());
+const PORT = process.env.PORT || 5000;
 
+app.use(cors());
+app.use(express.json());
 app.use("/api/auth", require("./routes/signup.js"));
 app.use("/api/auth", require("./routes/createproducts.js"));
 
@@ -34,7 +33,6 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running..");
   });
 }
-
 app.listen(PORT, () => {
   console.log("app running on", PORT);
 });
