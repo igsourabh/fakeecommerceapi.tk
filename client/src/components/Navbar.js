@@ -62,7 +62,7 @@ const Navbar = () => {
                 <Link to="/contactus">Contact Us</Link>
               </li>
               <li className="my-1 text-blue-700 text-lg font-medium">
-                <Link to="">About Us</Link>
+                <a target="_blank" href="https://www.linkedin.com/in/sourabhvaish/">About Us</a>
               </li>
               {!authtoken && (
                 <li className="my-1 text-blue-700 text-lg font-medium">
@@ -107,14 +107,14 @@ const Navbar = () => {
               >
                 Contact us
               </Link>
-              <Link to="" className="text-blue-600 text-lg font-normal mx-2">
+              <a target="_blank" href="https://www.linkedin.com/in/sourabhvaish/" className="text-blue-600 text-lg font-normal mx-2">
                 About us
-              </Link>
+              </a>
             </li>
           </ul>
 
           {!authtoken && (
-            <div className="absolute right-2">
+            <div className="absolute right-5">
               <Link
                 to="/login"
                 className="bg-blue-600 text-white py-1 px-3 rounded-md "
