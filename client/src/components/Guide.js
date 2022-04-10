@@ -20,9 +20,13 @@ const Guide = () => {
               <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4">
                 For getting all Products
               </h1>
+              <p className="text-lg">
+                You can add page number and pagesize by default it takes
+                pagesize 10
+              </p>
               <pre className="">
                 <code className="language-js ">
-                  {`fetch('https://www.fakeecommerceapi.tk/getallproducts')
+                  {`fetch('https://www.fakeecommerceapi.tk/getallproducts?page=1&size=10')
 .then(response => response.json())                                                         
 .then(json => console.log(json))}`}
                 </code>
@@ -47,9 +51,14 @@ const Guide = () => {
               <h1 className=" font-semibold text-xl md:text-2xl mb-5 text-gray-700 mt-4">
                 Get Products by category
               </h1>
+              <p className="text-lg">
+                at first at FakeEcommerceAPI supported category after
+                https://www.fakeecommerceapi.tk/category/ then add page number
+                and pagesize by default it takes pagesize 10
+              </p>
               <pre className="">
                 <code className="language-js ">
-                  {`fetch('https://www.fakeecommerceapi.tk/category/mobilephone')
+                  {`fetch('https://www.fakeecommerceapi.tk/category/:mobilephone?page=1&size=5')
 .then(response => response.json())                                                         
 .then(json => console.log(json))}`}
                 </code>

@@ -57,7 +57,7 @@ const Home = () => {
                     <div className="  w-[360px] md:w-fit ">
                       <pre className="">
                         <code className="language-js ">
-                          {`fetch('https://www.fakeecommerceapi.tk/getallproducts')
+                          {`fetch('https://www.fakeecommerceapi.tk/getallproducts?page=1&size=10')
 .then(response => response.json())
 .then(json => console.log(json))}`}
                         </code>
