@@ -1,10 +1,10 @@
 const express = require("express");
 const Products = require("../model/productSchema");
 
-const fetchuser = require("../middleware/fetchuser");
+
 
 const router = express.Router();
-// get all products
+
 router.get("/", async (req, res) => {
   try {
     let { page, size } = req.query;

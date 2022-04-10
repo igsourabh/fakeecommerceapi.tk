@@ -1,7 +1,7 @@
 const express = require("express");
 const Products = require("../model/productSchema");
 
-const fetchuser = require("../middleware/fetchuser");
+
 
 const router = express.Router();
 
