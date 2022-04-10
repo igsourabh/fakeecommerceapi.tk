@@ -1,83 +1,31 @@
 const express = require("express");
 const Products = require("../model/productSchema");
 
-
 const fetchuser = require("../middleware/fetchuser");
 
 const router = express.Router();
 
+// get singel pruducts
 
-// get singel pruducts 
+router.get("/:category/:id", async (req, res) => {
+  try {
+    const cate = req.params.category;
+    const exi = await Products.exists({ category: cate });
 
-router.get("/mobilephone/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
+    if (!exi) {
+      return res.json({ error: "sorry no category exist in our database" });
     }
-  });
-  router.get("/fashion/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
+    const id = req.params.id;
+    // const getsingelproductsexist = await Products.exists({ id: id });
+
+    const getsingelproducts = await Products.findById({ _id: id,category:cate });
   
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  router.get("/computers/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  router.get("/appliances/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  router.get("/electronics/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  router.get("/books/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-  router.get("/toys&games/:id", async (req, res) => {
-    try {
-      const id = req.params.id;
-      const getsingelproducts = await Products.findById({ _id: id });
-  
-      res.json(getsingelproducts);
-    } catch (error) {
-      console.log(error);
-    }
-  });
+    res.json(getsingelproducts);
+  } catch (error) {
+    console.log(error.message);
+    return res.json({ error: "sorry no prducts found with this id" });
+    
+  }
+});
 
 module.exports = router;
