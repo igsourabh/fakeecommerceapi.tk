@@ -4,8 +4,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 const dotenv = require("dotenv");
-dotenv.config({ path: "./config.env" });
-
+dotenv.config();
 const secret = process.env.JWT_SECRET;
 const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 

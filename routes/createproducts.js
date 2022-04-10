@@ -3,8 +3,7 @@ const Products = require("../model/productSchema");
 
 const dotenv = require("dotenv");
 const fetchuser = require("../middleware/fetchuser");
-dotenv.config({ path: "./config.env" });
-
+dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 const router = express.Router();
 
