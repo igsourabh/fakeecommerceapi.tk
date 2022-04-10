@@ -26,7 +26,7 @@ router.get("/:category", async (req, res) => {
       return res.json({ erro: "please provide vaild product category" });
     }
     const total = await Products.find({ category: cate }).countDocuments();
-    const totalpages = total / size;
+
     const exi = await Products.exists({ category: cate });
 
     if (!exi) {
@@ -36,11 +36,11 @@ router.get("/:category", async (req, res) => {
       .limit(limit)
       .skip(skip);
 
-    if (totalpages < page) {
-      return res.json({ error: "no more result page limit exaust" });
+    if (getallproducts.length < 1) {
+      return res.json({ error: "sorry no more products available" });
     }
 
-    res.json({ page, totalpages, size, total, getallproducts });
+    res.json({ page, size, total, getallproducts });
     console.log(cate);
   } catch (error) {
     console.log(error);
