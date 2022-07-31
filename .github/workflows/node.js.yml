@@ -27,4 +27,4 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm i
-    - run: pm2 start server
+    - run: pm2 restart server
